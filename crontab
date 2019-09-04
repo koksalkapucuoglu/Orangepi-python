@@ -1,1 +1,10 @@
 @reboot /usr/bin/python2.7  /home/sersa/test_code.py &
+#!/usr/bin/python
+from os.path import expanduser
+import datetime
+
+file = open(expanduser("~") + '/Desktop/HERE.txt', 'w')
+file.write("It worked!\n" + str(datetime.datetime.now()))
+file.close()
+
+
